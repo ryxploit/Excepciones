@@ -22,6 +22,8 @@ public class Exepciones {
         Arit();
         arreglos();
         clasex();
+	nullex();
+        stackovf();
        
     }
 
@@ -50,6 +52,24 @@ public class Exepciones {
      ex.printStackTrace(System.err);
         }
     }
-  
+  public static void nullex(){
+        String cadena=null;
+	
+        try{
+             cadena.charAt(4);
+        }catch(NullPointerException ex){
+           ex.printStackTrace(System.err);  
+        }
+    }
+    public static void stackovf(){
+	
+        try{
+              
+               stackovf();
+ 
+        }catch(ExceptionInInitializerError ex){
+           ex.printStackTrace(System.err);  
+        }
+    }
 
 }
